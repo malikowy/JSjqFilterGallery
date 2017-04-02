@@ -1,0 +1,44 @@
+.filter {
+  width: 82vw;
+  margin: 0 auto;
+  background: red;
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    button {
+      margin: 10px 30px;
+    }
+  }
+  &__items {
+    display: flex;
+    background: blue;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      background: green;
+      margin: 5px;
+      display: none;
+
+      &.highlight {
+        display: block;
+      }
+      figure {
+        overflow: hidden;
+        img {
+          transition: transform 0.5s ease-in-out;
+        }
+        &:hover img {
+          transform: scale(1.5);
+        }
+        figcaption {
+          position: absolute;
+          width: 350px;
+          transform: translate(10%, -140%);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
